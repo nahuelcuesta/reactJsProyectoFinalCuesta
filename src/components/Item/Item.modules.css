@@ -1,0 +1,51 @@
+.itemContainer {
+    background-color: aqua;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    max-width: 300px;
+    font-size: small;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem 0.2rem #ccc,
+        -.5rem -.5rem 0.2rem #f6f6f6;
+    background-color: rgb(240, 240, 240);
+}
+.itemContainer h1:hover{
+    color: rgb(92, 92, 255);
+    cursor: pointer;
+}
+
+.itemContainer img {
+    width: 95%;
+}
+
+.itemContainer p {
+    font-size: medium;
+}
+
+.itemContainer a {
+    width: 100px;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: .2rem .2rem 0.2rem #ccc,
+        -.2rem -.2rem 0.2rem #fffefe;
+    text-decoration: none;
+    color: black;
+}
+.itemContainer a:hover{
+    background-color: rgb(230, 230, 230);
+    box-shadow: .2rem .2rem 0.2rem  #fffefe,
+        -.2rem -.2rem 0.2rem #ccc;
+}

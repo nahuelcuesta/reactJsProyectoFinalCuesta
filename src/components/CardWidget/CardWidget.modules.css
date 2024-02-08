@@ -1,0 +1,11 @@
+.CarWidgetContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 1rem;
+
+}
+.CarWidgetContainer img{
+    cursor: pointer;
+}
