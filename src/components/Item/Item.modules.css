@@ -28,22 +28,6 @@
     font-size: medium;
 }
 
-.itemContainer a {
-    width: 100px;
-    margin: 0.2rem;
-    padding: 0.2rem;
-    border: none;
-    border-radius: 0.3rem;
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    background-color: transparent;
-    font-weight: 700;
-    box-shadow: .2rem .2rem 0.2rem #ccc,
-        -.2rem -.2rem 0.2rem #fffefe;
-    text-decoration: none;
-    color: black;
-}
 .itemContainer a:hover{
     background-color: rgb(230, 230, 230);
     box-shadow: .2rem .2rem 0.2rem  #fffefe,

@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
     }
 
     const removeItem = (id) =>{
-        const cartUpdated = cart.filter(item => item.id === id)
+        const cartUpdated = cart.filter(item => item.id != id)
         setCart(cartUpdated)
     }
 
@@ -50,7 +50,11 @@ export const CartProvider = ({ children }) => {
     
     //completar
     const getTotal = ()=>{
-
+    let accu = 0;
+    cart.forEach(prod =>{
+        accu += prod.quantity * prod.price
+    })
+    return accu
     }
     const total = getTotal();
 

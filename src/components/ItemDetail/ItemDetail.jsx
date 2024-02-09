@@ -2,6 +2,8 @@ import ItemCount from '../ItemCount/ItemCount'
 import { useState } from 'react';
 import { useCart } from '../../context/CartContext';
 import { useNotification } from '../../notification/NotificationService';
+import { Link } from 'react-router-dom';
+import './ItemDetail.modules.css'
 
 
 const ItemDetail = ({ id, name, img, category, price, description, stock }) => {
@@ -15,7 +17,9 @@ const {showNotification} = useNotification();
         id,
         name,
         quantity,
-        price
+        price,
+        img
+        
     }
     addItem(objProductToAdd)
     showNotification('success', `se agregaron correctamente ${quantity} ${name}`)
@@ -29,6 +33,7 @@ const {showNotification} = useNotification();
         <p>$ {price}</p>
         <p>{description}</p>
         <ItemCount stock={stock} onAdd={handleOnAdd}/>
+        <Link className='GreenButton' to={'/cart'}>Finalizar Compra</Link>
         </div>
     );
 };

@@ -4,9 +4,10 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
-import FormInput from "./components/Form/FormInput";
+/* import FormInput from "./components/Form/FormInput"; */
 import { NotificationProvider } from "./notification/NotificationService";
-/* import TextReader from "./components/TextReader/TextRedader"; */
+import CartView from "./components/CartView/CartView";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -28,12 +29,20 @@ function App() {
                 path="/detail/:productId"
                 element={<ItemDetailContainer />}
               />
+              <Route
+                path="/cart"
+                element={<CartView/>}
+              />
+              <Route
+                path="/checkout"
+                element={<Checkout/>}
+              />
               <Route path="*" element={<h1>ERROR 404</h1>} />
             </Routes>
           </CartProvider>
         </NotificationProvider>
       </BrowserRouter>
-      <FormInput />
+{/*       <FormInput /> */}
       {/*      <TextReader/> */}
     </>
   );
