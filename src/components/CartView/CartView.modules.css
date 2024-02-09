@@ -1,3 +1,35 @@
-.className{
-    width: 10%;
+.CartViewContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.CartViewItems{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+/*     background-color: aqua; */
+    gap: 1rem;
+}
+.CartContainer{
+    max-width:300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: wrap column;
+    padding: .5rem .5rem;
+    margin: .5rem;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem 0.2rem #ccc,
+        -.2rem -.2rem 0.2rem #f6f6f6;
+    background-color: rgb(240, 240, 240); 
+}
+.CartContainer button {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    background-color: rgb(225, 114, 114);
+}
+.imgDetail{
+    width: 30%;
 }
