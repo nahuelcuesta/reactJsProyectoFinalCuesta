@@ -19,21 +19,23 @@ Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas:
 1. **Clona el repositorio:**
 
    ```bash
-   *git clone https://github.com/tuusuario/thempo-ecommerce.git
+   git clone https://github.com/tuusuario/thempo-ecommerce.git
 
 2. **Ingresa al directorio del proyecto:**
- *cd thempo-ecommerce
+
+   `cd thempo-ecommerce`
 
 3. **Instala las dependencias:**
- *npm install
+
+   `npm install`
 
 4. **Configura las credenciales de Firebase en el archivo .env:**
- REACT_APP_FIREBASE_API_KEY=TuApiKey
-REACT_APP_FIREBASE_AUTH_DOMAIN=TuAuthDomain
-REACT_APP_FIREBASE_PROJECT_ID=TuProjectId
-
+   `REACT_APP_FIREBASE_API_KEY=TuApiKey`
+   `REACT_APP_FIREBASE_AUTH_DOMAIN=TuAuthDomain`
+   `REACT_APP_FIREBASE_PROJECT_ID=TuProjectId`
+`
 5. **Inicia la aplicación:**
-npm run dev
+   `npm run dev`
 
 ## Construido con 🛠️
 React
