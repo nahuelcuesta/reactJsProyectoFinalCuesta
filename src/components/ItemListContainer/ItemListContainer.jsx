@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../services/firebase/firebaseConfig";
 import {getDocs, collection, query, where} from "firebase/firestore";
 import { useNotification } from "../../notification/NotificationService";
+import { getProducts } from "../../services/firebase/firestore/products";
 
 const ItemListMemorized = memo(ItemList)
 
@@ -24,24 +25,16 @@ const ItemListContainer = ({ title }) => {
 useEffect(() => {
 setLoading(true)
 
-const productsCollection = categoryId
-    ? query(collection(db, 'products'), where('category', '==', categoryId))
-    : collection(db, 'products')
-
-getDocs(productsCollection)
-.then(querySnapshot => {
-  const productsAdepted = querySnapshot.docs.map(doc => {
-    const fields = doc.data()
-    return { id: doc.id, ...fields }
-  });
-  setProducts(productsAdepted);
+getProducts(categoryId)
+.then(products =>{
+  setProducts(products)
 })
-.catch((error)=>{
-  showNotification('error', 'hubo un error: ', error,)
+.catch(error=>{
+  showNotification('error', 'hubo un error')
 })
 .finally(()=>{
-  setLoading(false)
-}) 
+        setLoading(false)
+        }) 
 
   }, [categoryId]);
 

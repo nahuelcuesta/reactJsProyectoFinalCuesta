@@ -29,12 +29,7 @@ Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas:
 
    `npm install`
 
-4. **Configura las credenciales de Firebase en el archivo .env:**
-   `REACT_APP_FIREBASE_API_KEY=TuApiKey`
-   `REACT_APP_FIREBASE_AUTH_DOMAIN=TuAuthDomain`
-   `REACT_APP_FIREBASE_PROJECT_ID=TuProjectId`
-`
-5. **Inicia la aplicación:**
+4. **Inicia la aplicación:**
    `npm run dev`
 
 ## Construido con 🛠️
